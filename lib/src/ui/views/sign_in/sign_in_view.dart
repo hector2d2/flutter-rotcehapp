@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rotcehmx/src/ui/views/sign_in/widgets/img_welcome.dart';
 
 class SignInView extends StatelessWidget {
   const SignInView({Key? key}) : super(key: key);
@@ -6,8 +7,25 @@ class SignInView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Sign in'),
+      body: Container(
+        child: Form(
+          child: Column(
+            children: [
+              ImgWelcomeWidget(),
+              Text(
+                'Iniciar Sesión',
+              ),
+              TextField(),
+              TextField(),
+              ElevatedButton(
+                onPressed: () {},
+                child: Text(
+                  'Iniciar Sesión',
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
